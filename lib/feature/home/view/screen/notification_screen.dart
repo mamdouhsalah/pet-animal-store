@@ -19,6 +19,15 @@ class ScreenNotification extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text(
+          "your Notifications",
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+        elevation: 0,
+      ),
 
       body: ListView.builder(
         padding: const EdgeInsets.all(16),

@@ -1,3 +1,4 @@
+import 'package:animals/feature/home/color/color.dart';
 import 'package:animals/feature/home/view/screen/menu_screen.dart';
 import 'package:animals/feature/home/view/screen/notification_screen.dart';
 import 'package:animals/feature/home/view/screen/profile_screen.dart';
@@ -17,13 +18,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 253, 238, 215),
+      backgroundColor: backgroundColor,
 
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 253, 238, 215),
+        backgroundColor: appBarColor,
         toolbarHeight: 60,
 
         leading: Icon(Icons.location_on, color: Colors.orange),
+        centerTitle: true,
         title: Text(
           'pet animal store',
           style: TextStyle(
@@ -34,15 +36,23 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
 
         actions: [
-          Icon(Icons.search, color: Colors.orange),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ScreenNotification()),
+              );
+            },
+            icon: Icon(Icons.notifications_active, color: Colors.orange),
+          ),
           SizedBox(width: 8),
 
-          Icon(Icons.notifications_active, color: Colors.orange),
+          Icon(Icons.search, color: Colors.orange),
           SizedBox(width: 8),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 253, 238, 215),
+        backgroundColor: Color.fromARGB(255, 192, 252, 186),
 
         currentIndex: currentIndex,
         selectedItemColor: Colors.orange,

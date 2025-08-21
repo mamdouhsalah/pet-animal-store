@@ -34,24 +34,21 @@ class ScreenProfile extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ListTile(
-                leading: const Icon(Icons.email, color: Colors.deepPurple),
+                leading: const Icon(Icons.email, color: Colors.orange),
                 title: const Text("Email"),
                 subtitle: const Text("mamdouhsalah631@gmail.com"),
                 trailing: IconButton(
-                  icon: const Icon(Icons.edit),
+                  icon: const Icon(Icons.edit, color: Colors.orange),
                   onPressed: () {},
                 ),
               ),
               ListTile(
-                leading: const Icon(Icons.phone, color: Colors.deepPurple),
+                leading: const Icon(Icons.phone, color: Colors.orange),
                 title: const Text("Phone"),
                 subtitle: const Text("+20 01017430238"),
               ),
               ListTile(
-                leading: const Icon(
-                  Icons.location_on,
-                  color: Colors.deepPurple,
-                ),
+                leading: const Icon(Icons.location_on, color: Colors.orange),
                 title: const Text("Address"),
                 subtitle: const Text("Cairo, Egypt"),
               ),
